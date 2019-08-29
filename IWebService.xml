@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="IWebServiceservice" targetNamespace="http://tempuri.org/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/">
+  <message name="getERPData0Request">
+    <part name="DocType" type="xs:string"/>
+    <part name="InputDTOXml" type="xs:string"/>
+    <part name="ResultDTOXml" type="xs:string"/>
+    <part name="ResultMsg" type="xs:string"/>
+  </message>
+  <message name="getERPData0Response">
+    <part name="ResultDTOXml" type="xs:string"/>
+    <part name="ResultMsg" type="xs:string"/>
+    <part name="return" type="xs:boolean"/>
+  </message>
+  <message name="getERPDataBase641Request">
+    <part name="DocType" type="xs:string"/>
+    <part name="InputDTOXml" type="xs:string"/>
+    <part name="ResultDTOXml" type="xs:string"/>
+    <part name="ResultMsg" type="xs:string"/>
+  </message>
+  <message name="getERPDataBase641Response">
+    <part name="ResultDTOXml" type="xs:string"/>
+    <part name="ResultMsg" type="xs:string"/>
+    <part name="return" type="xs:boolean"/>
+  </message>
+  <message name="updateERPData2Request">
+    <part name="DocType" type="xs:string"/>
+    <part name="InputDTOXml" type="xs:string"/>
+    <part name="ResultMsg" type="xs:string"/>
+  </message>
+  <message name="updateERPData2Response">
+    <part name="ResultMsg" type="xs:string"/>
+    <part name="return" type="xs:boolean"/>
+  </message>
+  <message name="updateERPDataBase643Request">
+    <part name="DocType" type="xs:string"/>
+    <part name="InputDTOXml" type="xs:string"/>
+    <part name="ResultMsg" type="xs:string"/>
+  </message>
+  <message name="updateERPDataBase643Response">
+    <part name="ResultMsg" type="xs:string"/>
+    <part name="return" type="xs:boolean"/>
+  </message>
+  <message name="getIMSData4Request">
+    <part name="DocType" type="xs:string"/>
+    <part name="InputDTOXml" type="xs:string"/>
+    <part name="ResultDTOXml" type="xs:string"/>
+    <part name="ResultMsg" type="xs:string"/>
+  </message>
+  <message name="getIMSData4Response">
+    <part name="ResultDTOXml" type="xs:string"/>
+    <part name="ResultMsg" type="xs:string"/>
+    <part name="return" type="xs:boolean"/>
+  </message>
+  <message name="getIMSDataBase645Request">
+    <part name="DocType" type="xs:string"/>
+    <part name="InputDTOXml" type="xs:string"/>
+    <part name="ResultDTOXml" type="xs:string"/>
+    <part name="ResultMsg" type="xs:string"/>
+  </message>
+  <message name="getIMSDataBase645Response">
+    <part name="ResultDTOXml" type="xs:string"/>
+    <part name="ResultMsg" type="xs:string"/>
+    <part name="return" type="xs:boolean"/>
+  </message>
+  <message name="updateIMSData6Request">
+    <part name="DocType" type="xs:string"/>
+    <part name="InputDTOXml" type="xs:string"/>
+    <part name="UpdateType" type="xs:string"/>
+    <part name="ResultMsg" type="xs:string"/>
+  </message>
+  <message name="updateIMSData6Response">
+    <part name="ResultMsg" type="xs:string"/>
+    <part name="return" type="xs:boolean"/>
+  </message>
+  <message name="updateIMSDataBase647Request">
+    <part name="DocType" type="xs:string"/>
+    <part name="InputDTOXml" type="xs:string"/>
+    <part name="UpdateType" type="xs:string"/>
+    <part name="ResultMsg" type="xs:string"/>
+  </message>
+  <message name="updateIMSDataBase647Response">
+    <part name="ResultMsg" type="xs:string"/>
+    <part name="return" type="xs:boolean"/>
+  </message>
+  <portType name="IWebService">
+    <operation name="getERPData">
+      <input message="tns:getERPData0Request"/>
+      <output message="tns:getERPData0Response"/>
+    </operation>
+    <operation name="getERPDataBase64">
+      <input message="tns:getERPDataBase641Request"/>
+      <output message="tns:getERPDataBase641Response"/>
+    </operation>
+    <operation name="updateERPData">
+      <input message="tns:updateERPData2Request"/>
+      <output message="tns:updateERPData2Response"/>
+    </operation>
+    <operation name="updateERPDataBase64">
+      <input message="tns:updateERPDataBase643Request"/>
+      <output message="tns:updateERPDataBase643Response"/>
+    </operation>
+    <operation name="getIMSData">
+      <input message="tns:getIMSData4Request"/>
+      <output message="tns:getIMSData4Response"/>
+    </operation>
+    <operation name="getIMSDataBase64">
+      <input message="tns:getIMSDataBase645Request"/>
+      <output message="tns:getIMSDataBase645Response"/>
+    </operation>
+    <operation name="updateIMSData">
+      <input message="tns:updateIMSData6Request"/>
+      <output message="tns:updateIMSData6Response"/>
+    </operation>
+    <operation name="updateIMSDataBase64">
+      <input message="tns:updateIMSDataBase647Request"/>
+      <output message="tns:updateIMSDataBase647Response"/>
+    </operation>
+  </portType>
+  <binding name="IWebServicebinding" type="tns:IWebService">
+    <binding xmlns="http://schemas.xmlsoap.org/wsdl/soap/" style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getERPData">
+      <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:WebServiceInf-IWebService#getERPData" style="rpc"/>
+      <input>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:WebServiceInf-IWebService"/>
+      </input>
+      <output>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:WebServiceInf-IWebService"/>
+      </output>
+    </operation>
+    <operation name="getERPDataBase64">
+      <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:WebServiceInf-IWebService#getERPDataBase64" style="rpc"/>
+      <input>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:WebServiceInf-IWebService"/>
+      </input>
+      <output>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:WebServiceInf-IWebService"/>
+      </output>
+    </operation>
+    <operation name="updateERPData">
+      <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:WebServiceInf-IWebService#updateERPData" style="rpc"/>
+      <input>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:WebServiceInf-IWebService"/>
+      </input>
+      <output>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:WebServiceInf-IWebService"/>
+      </output>
+    </operation>
+    <operation name="updateERPDataBase64">
+      <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:WebServiceInf-IWebService#updateERPDataBase64" style="rpc"/>
+      <input>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:WebServiceInf-IWebService"/>
+      </input>
+      <output>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:WebServiceInf-IWebService"/>
+      </output>
+    </operation>
+    <operation name="getIMSData">
+      <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:WebServiceInf-IWebService#getIMSData" style="rpc"/>
+      <input>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:WebServiceInf-IWebService"/>
+      </input>
+      <output>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:WebServiceInf-IWebService"/>
+      </output>
+    </operation>
+    <operation name="getIMSDataBase64">
+      <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:WebServiceInf-IWebService#getIMSDataBase64" style="rpc"/>
+      <input>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:WebServiceInf-IWebService"/>
+      </input>
+      <output>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:WebServiceInf-IWebService"/>
+      </output>
+    </operation>
+    <operation name="updateIMSData">
+      <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:WebServiceInf-IWebService#updateIMSData" style="rpc"/>
+      <input>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:WebServiceInf-IWebService"/>
+      </input>
+      <output>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:WebServiceInf-IWebService"/>
+      </output>
+    </operation>
+    <operation name="updateIMSDataBase64">
+      <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:WebServiceInf-IWebService#updateIMSDataBase64" style="rpc"/>
+      <input>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:WebServiceInf-IWebService"/>
+      </input>
+      <output>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:WebServiceInf-IWebService"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="IWebServiceservice">
+    <port name="IWebServicePort" binding="tns:IWebServicebinding">
+      <address xmlns="http://schemas.xmlsoap.org/wsdl/soap/" location="http://localhost:8888/soap/IWebService"/>
+    </port>
+  </service>
+</definitions>
+
